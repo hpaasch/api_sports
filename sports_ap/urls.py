@@ -16,6 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from app import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^players/$', views.PlayerListAPIView.as_view(), name='player_list_api_view'),
+
 ]
+
+# Model-ViewType-APIView
