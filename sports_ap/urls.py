@@ -21,6 +21,7 @@ from app import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^players/$', views.PlayerListAPIView.as_view(), name='player_list_api_view'),
+    url(r'^players/(?P<pk>\d+)/$', views.PlayerDetailAPIView.as_view(), name='player_detail_api_view'),
 
 ]
 
